@@ -1,0 +1,32 @@
+{
+  "name": "mdlinkparser",
+  "version": "0.0.1",
+  "homepage": "https://github.com/alicoding/mdlinkparser",
+  "authors": [
+    "Ali Al Dallal <ali@alicoding.com>"
+  ],
+  "description": "Node Markdown Link Parser",
+  "main": "index.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Node",
+    "Markdown",
+    "Link",
+    "Parser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "makerstrap": "0.1.7",
+    "requirejs": "2.1.11",
+    "jquery": "2.1.1"
+  }
+}
