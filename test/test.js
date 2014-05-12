@@ -38,7 +38,7 @@ describe('Test command line tool for mdlinkparser', function() {
   it('Should return expected array if given correct file path with strings', function(done) {
     should(function () {
       child = exec('node ./bin/index.js lorem.json',
-        function (error, stdout, stderr) {
+        function (error, stdout) {
           stdout.should.be.eql("[ 'http://imgur.com/',\n  'http://gifctrl.com/',\n  'http://html9responsiveboilerstrapjs.com/',\n  'http://seenly.com/',\n  'http://zeus.ugent.be/' ]\n");
           if (error !== null) {
             console.log('exec error: ' + error);
@@ -50,7 +50,7 @@ describe('Test command line tool for mdlinkparser', function() {
   it('Should return [ \'http://senecac.on.ca\' ]\\n if execute node ./bin/index.js "[http://blahblah.com](http://senecac.on.ca)"', function(done) {
     should(function () {
       child = exec('node ./bin/index.js "[http://blahblah.com](http://senecac.on.ca)"',
-        function (error, stdout, stderr) {
+        function (error, stdout) {
           stdout.should.be.eql("[ 'http://senecac.on.ca' ]\n");
           if (error !== null) {
             console.log('exec error: ' + error);
@@ -63,7 +63,7 @@ describe('Test command line tool for mdlinkparser', function() {
   it('Should return information about markdown link if call with non existing file path', function(done) {
     should(function () {
       child = exec('node ./bin/index.js loren.json',
-        function (error, stdout, stderr) {
+        function (error, stdout) {
           stdout.should.be.eql("You either didn't pass a correct file path or the given string does not contain a valid Markdown link\n Please see Markdown DOCS for more details http://daringfireball.net/projects/markdown/syntax#link\n");
           if (error !== null) {
             console.log('exec error: ' + error);
@@ -75,7 +75,7 @@ describe('Test command line tool for mdlinkparser', function() {
   it('Should return information about markdown link if call with an invalid Markdown link format', function(done) {
     should(function () {
       child = exec('node ./bin/index.js "(link)[iswrong]"',
-        function (error, stdout, stderr) {
+        function (error, stdout) {
           stdout.should.be.eql("You either didn't pass a correct file path or the given string does not contain a valid Markdown link\n Please see Markdown DOCS for more details http://daringfireball.net/projects/markdown/syntax#link\n");
           if (error !== null) {
             console.log('exec error: ' + error);
