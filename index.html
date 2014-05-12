@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <!-- Force the latest IE version, in various cases when it may fall back to IE7 mode. But It is invalid html. -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="Markdown Parser" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Markdown Link Parser</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/alicoding/mdlinkparkser"><span class="fa fa-github"></span> alicoding/mdlinkparkser</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Markdown Link Parser</h1>
+      <p>Parse any link in markdown</p>
+    </div>
+  </div>
+  <div class="container">
+  <p>Parser will try to match any link that's in this format:</p>
+  <code>[some link](http://example.com)</code>
+  <h3>Sample Markdown</h3>
+  <pre>
+  Lorem markdownum, nam per virus si **fatetur meque** torus. Vertitur sub cremet,
+  nati verba, me nec sumpserat. Quantum si belli vulgasse, laetus et animos
+  [omnes](http://haskell.org/) erat, vulnera vix quondam, partitas.
+
+  > Inopem pondus; more arma mox **quod**, in hic mare simul. Experientia subiere
+  > inspirat frigida vestro Aiaci [metuitque](http://www.billmays.net/) clarae
+  > cornu arma cum concilio tantum adeam Eurypylusque parat, longa! Parvumque
+  > vulnus sensitque dominae populi factos **blandarum flebant adspicit** fiunt,
+  > inludens inlisit versantem totas in fontis ille rauco resilit.
+
+  Nec tyrannidis oculos monitae de obruta post gentesque gaudet Iuppiter saetaeque
+  illas. Excussit ferarum et Averna monstri pomum nimia, tuam aere bellica, tu
+  [sole dolorque](http://reddit.com/r/thathappened) inpositum Neptune tendens.
+
+  - Expulsa pomi quondam redditus nulla foliisque coluber
+  - Paret mihi petit
+  - Condebat metalla
+  - Inquit Hersilien
+
+  Pretiumque sidoniae Nyctimene docuit percussere [arripit](http://tumblr.com/)
+  flecti terras, forumque ventorum coluique et vires luctatur et serisque traxere.
+  Haec nymphae, rarissima senectae!
+
+  [Quo fecistis corpora]: http://stoneship.org/
+  [arripit]: http://tumblr.com/
+  [metuitque]: http://www.billmays.net/
+  [nec erat]: http://www.youtube.com/watch?v=MghiBW3r65M
+  [omnes]: http://haskell.org/
+  [sole dolorque]: http://reddit.com/r/thathappened
+</pre>
+
+<b>Above should return:</b>
+  <ol>
+    <li>http://haskell.org/</li>
+    <li>http://www.billmays.net/</li>
+    <li>http://reddit.com/r/thathappened</li>
+    <li>http://tumblr.com/</li>
+  </ol>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <textarea class="form-control" rows="19" id="text"></textarea>
+      <div class="output"><ol id="output"></ol></div>
+     </div>
+     <div class="panel-footer text-right">
+         <button class="btn btn-secondary" id="button"><span class="fa fa-info-circle"></span> Click me</button>
+      </div>
+     </div>
+  </div>
+  <footer class="wm-footer">
+    <div class="container">
+      <p>Footer...</p>
+    </div>
+  </footer>
+
+  <script data-main="js/main" src="bower_components/requirejs/require.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')
+  </script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
