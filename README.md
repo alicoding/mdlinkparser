@@ -5,6 +5,8 @@ mdlinkparser
 
 ##Markdown link parser
 
+**Try it live** http://alicoding.github.io/mdlinkparser/
+
 This parser will work in **node**, **browser** and **requirejs**
 
 ###Node.js
