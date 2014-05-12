@@ -8,7 +8,7 @@
     "grunt-mocha-test": "~0.10.2",
     "grunt-jslint": "~1.1.8",
     "should": "~3.3.1",
-    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-less": "~0.11.0"
   },
   "name": "mdlinkparser",
   "description": "Node Markdown Parser",
