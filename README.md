@@ -3,7 +3,7 @@ mdlinkparser
 
 [![Build Status](https://travis-ci.org/alicoding/mdlinkparser.svg?branch=master)](https://travis-ci.org/alicoding/mdlinkparser) [![npm-version](http://img.shields.io/npm/v/mdlinkparser.svg)](https://www.npmjs.org/package/mdlinkparser) [![Dependency Status](https://david-dm.org/alicoding/mdlinkparser.svg?theme=shields.io)](https://david-dm.org/alicoding/mdlinkparser) [![devDependency Status](https://david-dm.org/alicoding/mdlinkparser/dev-status.svg?theme=shields.io)](https://david-dm.org/alicoding/mdlinkparser#info=devDependencies)
 
-Markdown link parser
+##Markdown link parser
 
 This parser will work in **node**, **browser** and **requirejs**
 
